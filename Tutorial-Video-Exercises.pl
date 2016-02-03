@@ -1,11 +1,8 @@
-loves(romeo, juliet).
+count_to_10(21) :- write(21), nl.
 
-loves(juliet, romeo) :- loves(romeo, juliet).
+count_to_10(X) :-
+	X =< 23,
+	write(X), nl,
+	Y is X + 1,
+	count_to_10(Y).
 
-happy(albert).
-happy(alice).
-with_albert(alice).
-
-runs(albert) :- happy(albert).
-
-dances(alice) :- happy(alice), with_albert(alice).
